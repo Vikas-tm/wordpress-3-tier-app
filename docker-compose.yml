@@ -1,7 +1,7 @@
 nginx:
     image: nginx:latest
     ports:
-        - '80:80'
+        - '8090:80'
     volumes:
         - ./nginx:/etc/nginx/conf.d
         - ./logs/nginx:/var/log/nginx
@@ -13,7 +13,7 @@ nginx:
 mysql:
     image: mariadb
     ports:
-        - '3306:3306'
+        - '4306:3306'
     volumes:
         - ./db-data:/var/lib/mysql
     environment:
